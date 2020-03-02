@@ -1,6 +1,9 @@
 const chai = require('chai');
 const threeNumberSum = require('../threeNumberSum/threeNumberSum')
 
+it('returns an array', function(){
+  chai.expect(threeNumberSum([], 0)).to.deep.equal([]);
+})
 it('takes an array of positive integers', function(){
   chai.expect(threeNumberSum([1,2,3], 6)).to.deep.equal([[1,2,3]])
 })
