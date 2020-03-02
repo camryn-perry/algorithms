@@ -1,4 +1,4 @@
 function threeNumberSum(array, target){
 
 }
-exports.threeNumberSum = threeNumberSum;
+module.exports = threeNumberSum;
