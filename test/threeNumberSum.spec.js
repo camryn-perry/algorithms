@@ -19,3 +19,16 @@ it('returns all triplet arrays, in sorted order', function() {
     [-1, 0, 1],
   ]);
 });
+
+it('can accommodate large return values, all sorted', function() {
+  chai.expect(threeNumberSum([12, 3, 1, 2, -6, 5, 0, -8, -1, 6, -5], 0)).to.deep.equal([
+    [-8, 2, 6],
+    [-8, 3, 5],
+    [-6, 0, 6],
+    [-6, 1, 5],
+    [-5, -1, 6],
+    [-5, 0, 5],
+    [-5, 2, 3],
+    [-1, 0, 1],
+  ]);
+});
