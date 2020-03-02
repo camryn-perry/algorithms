@@ -32,3 +32,6 @@ it('can accommodate large return values, all sorted', function() {
     [-1, 0, 1],
   ]);
 });
+it('returns an empty array if there are no sums', function(){
+  chai.expect(threeNumberSum([1,-5,7,8,3], 100)).to.deep.equal([])
+})
