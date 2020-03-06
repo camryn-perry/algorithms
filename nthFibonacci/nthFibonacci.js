@@ -14,15 +14,13 @@
 //if number is already in saved nums, return that number. Otherwise, proceed with recursion.
 //start off fibNums with two base case values
 function nthFibonacci(num, fibNums = {1: 0, 2:1}){
+  //must check for key, as the value of key 1 is a falsey value--> 0
   if(num in fibNums){
-    console.log(fibNums[num])
     return fibNums[num]
-  // }else{
-  //   //continue with recursion, add solution to fibNums
-  //   fibNums[num] = nthFibonacci(num-1, fibNums) + nthFibonacci(num-2, fibNums);
-  //   return fibNums[num];
-  // }
-
-}
+  }else{
+    //continue with recursion, add answer to fibNums
+    fibNums[num] = nthFibonacci(num-1, fibNums) + nthFibonacci(num-2, fibNums);
+    return fibNums[num];
+  }
 }
 module.exports = nthFibonacci;
